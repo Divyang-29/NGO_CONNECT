@@ -6,7 +6,7 @@ require("dotenv").config();
 const authRoutes = require("./Routes/auth.routes.js");
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const User = require("./modules/user.js");
 const Admin = require("./modules/admin.js");
 const Ngo = require("./modules/ngo.js");
@@ -15,7 +15,10 @@ const expo = new Expo();
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend URL
+    origin: [
+      "http://localhost:5173",
+      "https://ngo-connect-frontend.onrender.com", // 👈 future frontend URL
+    ],
     credentials: true,
   })
 );
