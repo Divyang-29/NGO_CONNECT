@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
 import LoginModal from "./components/Auth/LoginModal";
-import Logo from "./assets/ngo_connect_logo.png";
+import Logo from "./assets/logo.png";
 
 export default function Navbar() {
   const [authOpen, setAuthOpen] = useState(false);
