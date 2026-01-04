@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "expo-server-sdk": "^4.0.0",
+    "express": "^5.2.1",
+    "init": "^0.1.2",
+    "install": "^0.13.0",
+    "mongoose": "^9.0.2",
+    "nodemon": "^3.1.11",
+    "npm": "^11.7.0"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aanchal-1201/NGO_CONNECT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aanchal-1201/NGO_CONNECT/issues"
+  },
+  "homepage": "https://github.com/Aanchal-1201/NGO_CONNECT#readme"
+}
