@@ -1,0 +1,237 @@
+/* ======================
+   NAVBAR BASE
+====================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 72px;
+  padding: 0 50px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  font-family: "Inter", sans-serif;
+}
+
+/* ======================
+   LEFT SECTION
+====================== */
+
+.navbar-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 158px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ======================
+   CENTER MENU
+====================== */
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+}
+
+.nav-links li:first-child {
+  color: #ff8c2b;
+}
+
+.nav-links li:hover {
+  color: #ff8c2b;
+}
+
+/* ======================
+   RIGHT SECTION
+====================== */
+
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.phone,
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ======================
+   BUTTON
+====================== */
+
+.add-btn {
+  padding: 11px 22px;
+  border: 1px solid #ff8c2b;
+  background: transparent;
+  color: #ff8c2b;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #ff8c2b;
+  color: #fff;
+}
+
+/* ======================
+   USER DROPDOWN
+====================== */
+
+.user-wrapper {
+  position: relative;
+}
+
+.user {
+  cursor: pointer;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 180px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.user-dropdown li {
+  padding: 12px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.user-dropdown li:hover {
+  background: #f7f7f7;
+}
+
+.user-dropdown .logout {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+/* ======================
+   HAMBURGER
+====================== */
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ff8c2b;
+}
+
+/* ======================
+   MOBILE MENU
+====================== */
+
+.mobile-menu {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  z-index: 999;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+.mobile-menu li {
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ======================
+   MOBILE VIEW
+====================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 64px;
+    padding: 0 20px;
+  }
+
+  .navbar-center,
+  .phone,
+  .add-btn {
+    display: none;
+  }
+
+  .logo img {
+    max-height: 42px;
+  }
+
+  .user span:last-child {
+    display: none;
+  }
+
+  .user {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: inline-block;
+    margin-left: 16px;
+  }
+}
+.user span:last-child {
+  display: none;
+}

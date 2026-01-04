@@ -1,0 +1,245 @@
+/* OVERLAY */
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* MODAL */
+.auth-modal {
+  width: 900px;
+  height: 560px;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* LEFT IMAGE */
+.auth-image {
+  width: 45%;
+  height: 100%;
+  background-image: url("https://themesflat.co/html/proty/images/section/banner-login.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* RIGHT CONTENT */
+.auth-content {
+  width: 55%;
+  padding: 40px 45px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  font-size: 22px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #444;
+}
+
+/* TITLE */
+.auth-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* INPUTS */
+.auth-content input {
+  width: 100%;
+  height: 52px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 0 16px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+.auth-content input:focus {
+  border-color: #f7931e;
+}
+
+/* PRIMARY BUTTON */
+.primary-btn {
+  width: 100%;
+  height: 52px;
+  border-radius: 14px;
+  background: #f7931e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* SWITCH TEXT */
+.switch-text {
+  margin-top: 18px;
+  font-size: 14px;
+  text-align: center;
+  color: #777;
+}
+
+.switch-text span {
+  color: #f7931e;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* DIVIDER */
+.divider {
+  text-align: center;
+  margin: 24px 0 18px;
+  font-size: 14px;
+  color: #999;
+}
+
+/* SOCIAL BUTTONS */
+.social-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.social-btns button {
+  flex: 1;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Hide left image */
+  .auth-image {
+    display: none;
+  }
+
+  /* Modal full width */
+  .auth-modal {
+    width: 94%;
+    height: auto;
+    max-height: 92vh;
+    border-radius: 16px;
+  }
+
+  /* Content takes full width */
+  .auth-content {
+    width: 100%;
+    padding: 28px 22px;
+    overflow-y: auto;
+  }
+
+  /* Title smaller */
+  .auth-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  /* Inputs */
+  .auth-content input {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  /* Buttons */
+  .primary-btn {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  /* Close button easier to tap */
+  .close-btn {
+    top: 16px;
+    right: 16px;
+    font-size: 20px;
+  }
+
+  /* Social buttons stack better */
+  .social-btns {
+    flex-direction: column;
+  }
+
+  .social-btns button {
+    height: 46px;
+  }
+}
+
+@media (max-width: 420px) {
+  .auth-modal {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .auth-content {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .auth-modal {
+    width: 90%;
+    height: auto;
+    max-height: 90vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-btns button {
+    width: 50%;
+    height: 66px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* ✅ THIS IS THE FIX */
+  }
+
+  .social-btns button {
+    width: 50%;
+    height: 66px;
+  }
+}
+
+.role-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
